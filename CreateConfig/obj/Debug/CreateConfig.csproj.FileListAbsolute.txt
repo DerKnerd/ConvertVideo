@@ -1,4 +1,0 @@
-C:\Users\Kirk\documents\visual studio 2012\Projects\ConvertVideo\CreateConfig\bin\Debug\CreateConfig.exe
-C:\Users\Kirk\documents\visual studio 2012\Projects\ConvertVideo\CreateConfig\bin\Debug\CreateConfig.pdb
-C:\Users\Kirk\documents\visual studio 2012\Projects\ConvertVideo\CreateConfig\obj\Debug\CreateConfig.exe
-C:\Users\Kirk\documents\visual studio 2012\Projects\ConvertVideo\CreateConfig\obj\Debug\CreateConfig.pdb
