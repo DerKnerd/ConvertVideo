@@ -11,7 +11,7 @@ To configure the service, use the App CreateConfig.
 
 TODO
 ----
-[ ] Allow different codecs than wmv
-[ ] Make resolution configurable
-[ ] Make better config App
-[ ] Create status HTML file
+- [ ] Allow different codecs than wmv
+- [ ] Make resolution configurable
+- [ ] Make better config App
+- [ ] Create status HTML file
