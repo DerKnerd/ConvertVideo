@@ -21,11 +21,11 @@ namespace ConvertVideo {
             File.AppendAllText("C:\\info.log", "hole bitraten\r\n");
             GetBitrate(file.FullName, out videobitrate, out audiobitrate);
 
-            //string arguments = "-i \"" + file.FullName + "\" -b:v " + videobitrate + "k -b:a " + audiobitrate + "k -vcodec wmv2 -acodec wmav2 -y " + newfile;
-            string arguments = "-i \"" + file.FullName + "\" -b:v " + videobitrate + "k -vcodec wmv2 -acodec wmav2 -y " + newfile;
+            string arguments = "-i \"" + file.FullName + "\" -b:v " + videobitrate + "k -vcodec wmv2 -acodec wmav2 -ac 2 -y " + newfile;
+
             File.AppendAllText("C:\\info.log", "start process\r\n");
             Process proc = new Process();
-            proc.StartInfo = new ProcessStartInfo(@"C:\Program Files\Converter\libs\ffmpeg.exe", arguments);
+            proc.StartInfo = new ProcessStartInfo(@"libs\ffmpeg.exe", arguments);
             proc.StartInfo.Verb = "runas";
 
             File.AppendAllText("C:\\info.log", proc.StartInfo.FileName + " macht magie\r\n");
@@ -40,7 +40,7 @@ namespace ConvertVideo {
         private static void GetBitrate(string filename, out string videobitrate, out string audiobitrate) {
             Process proc = new Process();
             string arguments = "-v quiet -print_format json -show_streams \"" + filename + "\"";
-            proc.StartInfo = new ProcessStartInfo(@"C:\Program Files\Converter\libs\ffprobe.exe", arguments);
+            proc.StartInfo = new ProcessStartInfo(@"libs\ffprobe.exe", arguments);
             proc.StartInfo.RedirectStandardOutput = true;
             proc.StartInfo.UseShellExecute = false;
             proc.Start();
