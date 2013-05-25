@@ -1,20 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
-using System.Text;
-using System.Xml.Serialization;
+using System.Windows.Forms;
 
 namespace CreateConfig {
-    class Program {
-        static void Main(string[] args) {
-            Config c = new Config();
-            c.path = "C:\test";
-            c.pathToMoveTo = "C:\test.end";
-            c.move = true;
-
-            XmlSerializer xs = new XmlSerializer(c.GetType());
-            xs.Serialize(new FileStream(@"C:\test\config.xml", FileMode.OpenOrCreate), c);
+    static class Program {
+        /// <summary>
+        /// Der Haupteinstiegspunkt für die Anwendung.
+        /// </summary>
+        [STAThread]
+        static void Main() {
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new Form1());
         }
     }
 }

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ffprobe>
+  <format filename="Mein Film.mp4" nb_streams="2" format_name="mov,mp4,m4a,3gp,3g2,mj2" format_long_name="QuickTime / MOV"
+          start_time="0.000000"
+          duration="26.047979" 
+          size="13133696" 
+          bit_rate="4033693">
+    <tag key="major_brand" value="mp42"/>
+    <tag key="minor_version" value="0"/>
+    <tag key="compatible_brands" value="mp41isom"/>
+  </format>
+</ffprobe>
